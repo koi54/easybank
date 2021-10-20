@@ -11,16 +11,28 @@
 body {
     margin: 0;
     font-size: 18px;
+    /* overflow: hidden; */
 }
 
 header {
-    background-color: var(--verly-light-gray);
+    position: relative;
+    z-index: 100;
 }
 
 h1 {
     color: var(--dark-blue);
     font-size: 3rem;
     margin: 0;
+}
+
+h2 {
+    color: var(--dark-blue);
+    margin: 0;
+    padding: 3rem 0 1.5rem;
+}
+
+h4 {
+    color: var(--dark-blue);
 }
 
 p {
@@ -40,6 +52,10 @@ p {
     border-radius: 25px;
     padding: .5rem 1rem;
     cursor: pointer;
+}
+
+.bg-darker {
+    background-color: var(--verly-light-gray);
 }
 
 .container {
@@ -79,8 +95,8 @@ p {
     background: url(images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position-x: 800px;
-    background-position-y: -100px;
+    background-position-x: 960px;
+    background-position-y: -180px;
 }
 
 .welcome-container {
@@ -90,4 +106,16 @@ p {
 
 .welcome-container > div {
     margin: 1rem 0;
+}
+
+.onboarding .mockup-container {
+    position: absolute;
+    right: -8rem;
+    top: -6rem;
+    overflow: hidden;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
