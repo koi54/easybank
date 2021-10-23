@@ -17,16 +17,21 @@ body {
 header {
     position: relative;
     z-index: 100;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark-blue)
 }
 
 h1 {
-    color: var(--dark-blue);
     font-size: 3rem;
     margin: 0;
 }
 
 h2 {
-    color: var(--dark-blue);
     margin: 0;
     padding: 3rem 0 1.5rem;
 }
@@ -37,10 +42,15 @@ h4 {
 
 p {
     line-height: 1.5;
+    color: var(--grayish-blue);
 }
 
 .main-text {
     color: var(--grayish-blue);
+}
+
+.secondary-text {
+    font-size: 0.75rem;
 }
 
 .diagonal-gradient {
@@ -55,7 +65,11 @@ p {
 }
 
 .bg-darker {
-    background-color: var(--verly-light-gray);
+    background-color: var(--light-grayish-blue);
+}
+
+.bg-lighter {
+    background-color: var( --verly-light-gray);
 }
 
 .container {
@@ -108,14 +122,60 @@ p {
     margin: 1rem 0;
 }
 
+
 .onboarding .mockup-container {
     position: absolute;
     right: -8rem;
     top: -6rem;
-    overflow: hidden;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+/* Base */
+/* Layout */
+
+/* Elements */
+.article-card {
+    background-color: var(--white);
+   
+}
+
+.article-container {
+    padding: 1rem;
+}
+
+.article-image img{
+    max-width: 100%;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    padding: 2rem 0;
+}
+
+.footer-nav {
+    list-style: none;
+
+}
+
+.footer-nav img {
+    fill: var(--white);
+}
+.footer-nav .nav-item {
+    padding: 0.5rem 0;
+}
+
+.footer-nav .nav-item a{
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 300;
 }
