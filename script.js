@@ -1,3 +1,4 @@
+// Animation
 const sections = document.querySelectorAll('.observer-point');
 
 observer = new IntersectionObserver((entries) => {
@@ -9,11 +10,19 @@ observer = new IntersectionObserver((entries) => {
             entry.target.style.animation = `none`;
         }
     })
-
-
 })
 
 sections.forEach(section => {
     observer.observe(section);
+})
+
+// Interactions
+let isOpen = false;
+const menu = document.getElementById('hamburger');
+const nav = document.getElementById('navigation')
+menu.addEventListener('click', () => {
+    isOpen = !isOpen;
+    isOpen ? nav.classList.add('navigation-visible') : nav.classList.remove('navigation-visible');
+
 })
 
